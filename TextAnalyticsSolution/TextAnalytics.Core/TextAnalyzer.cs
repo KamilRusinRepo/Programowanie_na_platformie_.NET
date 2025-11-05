@@ -12,16 +12,15 @@ namespace TextAnalytics.Core
             int digits = CountDigits(text);
             int punctuation = CountPunctuation(text);
 
-            var words = GetWords(text);
-            int wordCount = words.Count;
-            int uniqueWordCount = words.Distinct(StringComparer.OrdinalIgnoreCase).Count();
-            string mostCommonWord = GetMostCommonWord(words);
-            double averageWordLength = words.Count > 0 ? words.Average(w => w.Length) : 0;
-            string longestWord = words.OrderByDescending(w => w.Length).FirstOrDefault() ?? string.Empty;
-            string shortestWord = words.OrderBy(w => w.Length).FirstOrDefault() ?? string.Empty;
+            int wordCount = CountWords(text);
+            int uniqueWordCount = CountUniqueWords(text);
+            string mostCommonWord = GetMostCommonWord(text);
+            double averageWordLength = AverageWordLength(text);
+            string longestWord = LongestWord(text);
+            string shortestWord = ShortestWord(text);
 
             var sentences = GetSentences(text);
-            int sentenceCount = sentences.Count;
+            int sentenceCount = SentencesCount(text);
             double averageWordsPerSentence = sentenceCount > 0 ? (double)wordCount / sentenceCount : 0;
             string longestSentence = sentences.OrderByDescending(s => GetWords(s).Count).FirstOrDefault() ?? string.Empty;
 
@@ -68,6 +67,35 @@ namespace TextAnalytics.Core
             return text.Count(char.IsPunctuation);
         }
 
+        private int CountWords(string text)
+        {
+            return Regex.Matches(text, @"\b\w+\b").Count;
+        }
+
+        private int CountUniqueWords(string text)
+        {
+            var wordsList = GetWords(text);
+            return wordsList.Distinct(StringComparer.OrdinalIgnoreCase).Count();
+        }
+
+        private double AverageWordLength(string text)
+        {
+            var words = GetWords(text);
+            return words.Count > 0 ? words.Average(w => w.Length) : 0;
+        }
+
+        private string LongestWord(string text)
+        {
+            var words = GetWords(text);
+            return words.OrderByDescending(w => w.Length).FirstOrDefault() ?? string.Empty;
+        }
+
+        private string ShortestWord(string text)
+        {
+            var words = GetWords(text);
+            return words.OrderBy(w => w.Length).FirstOrDefault() ?? string.Empty;
+        }
+
         private List<string> GetWords(string text)
         {
             return Regex.Matches(text, @"\b\w+\b")
@@ -75,8 +103,9 @@ namespace TextAnalytics.Core
                 .ToList();
         }
 
-        private string GetMostCommonWord(List<string> words)
+        private string GetMostCommonWord(string text)
         {
+            var words = GetWords(text);
             if (words.Count == 0) return string.Empty;
 
             return words.GroupBy(w => w, StringComparer.OrdinalIgnoreCase)
@@ -85,13 +114,18 @@ namespace TextAnalytics.Core
                 .First().Key;
         }
 
+        private int SentencesCount(string text)
+        {
+            var sentences = GetSentences(text);
+            return sentences.Count;
+        }
+
         private List<string> GetSentences(string text)
         {
             return Regex.Split(text, @"(?<=[.!?])\s+")
                 .Where(s => !string.IsNullOrWhiteSpace(s))
                 .ToList();
         }
-
     }
 
     public sealed record TextStatistics(
