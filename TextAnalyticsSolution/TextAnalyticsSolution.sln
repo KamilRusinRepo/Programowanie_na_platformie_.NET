@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8D76E5C7-ED75-4F1A-AF2F-F74D6EC61F95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E58F99CA-777C-4ABE-881E-08927F3B78FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.App", "TextAnalytics.App\TextAnalytics.App.csproj", "{13CD8238-6462-42EB-B891-2F8DA1E19481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Core", "TextAnalytics.Core\TextAnalytics.Core.csproj", "{99AB0BE2-C2C1-4CD1-BFE9-F24967804695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Services", "TextAnalytics.Services\TextAnalytics.Services.csproj", "{E8A91340-B2CD-4843-A7DC-902B9C33C1C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Tests", "TextAnalytics.Tests\TextAnalytics.Tests.csproj", "{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13CD8238-6462-42EB-B891-2F8DA1E19481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CD8238-6462-42EB-B891-2F8DA1E19481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CD8238-6462-42EB-B891-2F8DA1E19481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CD8238-6462-42EB-B891-2F8DA1E19481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99AB0BE2-C2C1-4CD1-BFE9-F24967804695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AB0BE2-C2C1-4CD1-BFE9-F24967804695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AB0BE2-C2C1-4CD1-BFE9-F24967804695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AB0BE2-C2C1-4CD1-BFE9-F24967804695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A91340-B2CD-4843-A7DC-902B9C33C1C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A91340-B2CD-4843-A7DC-902B9C33C1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A91340-B2CD-4843-A7DC-902B9C33C1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A91340-B2CD-4843-A7DC-902B9C33C1C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13CD8238-6462-42EB-B891-2F8DA1E19481} = {8D76E5C7-ED75-4F1A-AF2F-F74D6EC61F95}
+		{99AB0BE2-C2C1-4CD1-BFE9-F24967804695} = {8D76E5C7-ED75-4F1A-AF2F-F74D6EC61F95}
+		{E8A91340-B2CD-4843-A7DC-902B9C33C1C3} = {8D76E5C7-ED75-4F1A-AF2F-F74D6EC61F95}
+		{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C} = {E58F99CA-777C-4ABE-881E-08927F3B78FF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8BE06E3-CE08-4712-B8B5-1C3C49C045F6}
+	EndGlobalSection
+EndGlobal
