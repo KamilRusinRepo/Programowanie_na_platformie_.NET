@@ -2,18 +2,19 @@
 
 public class FileInputProvider : IInputProvider
 {
-    private readonly string _filePath;
-
-    public FileInputProvider(string filePath)
-    {
-        _filePath = filePath;
-    }
-
     public string GetInput()
     {
-        if (!File.Exists(_filePath))
-            throw new FileNotFoundException($"Plik {_filePath} nie istnieje.");
+        Console.Write("Podaj ścieżkę do pliku: ");
+        string? path = Console.ReadLine();
 
-        return File.ReadAllText(_filePath);
+        if (string.IsNullOrWhiteSpace(path))
+            throw new ArgumentException("Nie podano ścieżki do pliku.");
+
+        if (!File.Exists(path))
+            throw new FileNotFoundException($"Plik '{path}' nie istnieje.");
+
+        string content = File.ReadAllText(path);
+
+        return content;
     }
 }

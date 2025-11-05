@@ -6,9 +6,6 @@ namespace TextAnalytics.Core
     {
         public TextStatistics Analyze(string text)
         {
-            if (string.IsNullOrWhiteSpace(text))
-                return new TextStatistics(0, 0, 0, 0, 0, 0, 0, string.Empty, 0, string.Empty, string.Empty, 0, 0, string.Empty);
-
             int charactersWithSpaces = CountCharacters(text, includeSpaces: true);
             int charactersWithoutSpaces = CountCharacters(text, includeSpaces: false);
             int letters = CountLetters(text);
