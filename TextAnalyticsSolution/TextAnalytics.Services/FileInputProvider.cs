@@ -1,6 +1,6 @@
 ﻿namespace TextAnalytics.Services;
 
-public class FileInputProvider
+public class FileInputProvider : IInputProvider
 {
     private readonly string _filePath;
 
