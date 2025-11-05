@@ -22,16 +22,38 @@ string text = string.Empty;
 
 if (args.Length > 0)
 {
-    string filePath = args[0];
-    if (File.Exists(filePath))
+    if (args[0] == "--file")
     {
-        text = File.ReadAllText(filePath);
-        logger.LogInfo($"Wczytano dane z pliku: {filePath}");
+        if (args.Length < 2)
+        {
+            logger.LogError("Brak ścieżki do pliku");
+            return;
+        }
+
+        string path = args[1];
+
+        try
+        {
+            if (string.IsNullOrWhiteSpace(path))
+                throw new ArgumentException("Nie podano ścieżki do pliku.");
+
+            if (!File.Exists(path))
+                throw new FileNotFoundException($"Plik '{path}' nie istnieje.");
+
+            text = File.ReadAllText(path);
+        }
+        catch(Exception ex)
+        {
+            logger.LogError("Błędna ścieżka do pliku.");
+        }
+    }
+    else if (args[0] == "--interactive")
+    {
+        text = inputProvider.GetInput();
     }
     else
     {
-        logger.LogError($"Plik '{filePath}' nie istnieje!");
-        return;
+        Console.WriteLine($"Nieznana opcja: {args[0]}");
     }
 }
 else

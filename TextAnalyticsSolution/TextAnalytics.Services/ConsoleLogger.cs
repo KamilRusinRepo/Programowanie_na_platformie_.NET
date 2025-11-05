@@ -1,6 +1,6 @@
 ﻿namespace TextAnalytics.Services;
 
-public class ConsoleLogger : ILoggerService
+public class ConsoleLogger : ILoggerService 
 {
     public void LogInfo(string message)
     {
