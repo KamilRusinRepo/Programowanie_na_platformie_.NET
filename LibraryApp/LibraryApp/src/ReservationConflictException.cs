@@ -1,0 +1,8 @@
+﻿namespace LibraryApp;
+
+public class ReservationConflictException : Exception
+{
+    public ReservationConflictException(string message) : base(message)
+    {
+    }
+}
