@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\TextAnalytics.Core\TextAnalytics.Core.csproj" />
     <ProjectReference Include="..\TextAnalytics.Core\TextAnalytics.Core.csproj" />
   </ItemGroup>
 
