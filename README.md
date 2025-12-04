@@ -1,1 +1,1 @@
-Laboratorium nr1 jest dostępne w gałęzi 'lab1'
+Gałąź z projektem do Labolatorium nr. 2
