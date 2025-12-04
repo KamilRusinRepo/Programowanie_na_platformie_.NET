@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8D76E5C7-ED7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E58F99CA-777C-4ABE-881E-08927F3B78FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.App", "TextAnalytics.App\TextAnalytics.App.csproj", "{13CD8238-6462-42EB-B891-2F8DA1E19481}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.App", "src\TextAnalytics.App\TextAnalytics.App.csproj", "{13CD8238-6462-42EB-B891-2F8DA1E19481}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Core", "TextAnalytics.Core\TextAnalytics.Core.csproj", "{99AB0BE2-C2C1-4CD1-BFE9-F24967804695}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Core", "src\TextAnalytics.Core\TextAnalytics.Core.csproj", "{99AB0BE2-C2C1-4CD1-BFE9-F24967804695}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Services", "TextAnalytics.Services\TextAnalytics.Services.csproj", "{E8A91340-B2CD-4843-A7DC-902B9C33C1C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Services", "src\TextAnalytics.Services\TextAnalytics.Services.csproj", "{E8A91340-B2CD-4843-A7DC-902B9C33C1C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Tests", "TextAnalytics.Tests\TextAnalytics.Tests.csproj", "{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalytics.Tests", "tests\TextAnalytics.Tests\TextAnalytics.Tests.csproj", "{F8DF99E7-7462-431F-9D8D-F6A7B3BC928C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
