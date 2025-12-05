@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportApi", "TransportApi\TransportApi.csproj", "{905312D3-1380-4BD1-ACDC-A0519400AAD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportApi.Tests", "TransportApi.Tests\TransportApi.Tests.csproj", "{AB802C82-2D93-43B5-BF07-876BEE37455F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{905312D3-1380-4BD1-ACDC-A0519400AAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905312D3-1380-4BD1-ACDC-A0519400AAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905312D3-1380-4BD1-ACDC-A0519400AAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905312D3-1380-4BD1-ACDC-A0519400AAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB802C82-2D93-43B5-BF07-876BEE37455F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB802C82-2D93-43B5-BF07-876BEE37455F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB802C82-2D93-43B5-BF07-876BEE37455F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB802C82-2D93-43B5-BF07-876BEE37455F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
