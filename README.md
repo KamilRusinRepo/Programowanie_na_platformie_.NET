@@ -1,1 +1,4 @@
-Laboratorium nr1 jest dostępne w gałęzi 'lab1'
+Każde laboratorium znajduje się w osobnej gałęzi, nazwanej zgodnie z numerem laboratorium.
+
+Prezentacja (wzorzec Iterator) znajduje się w gałęzi: **`prezentacja`**.
+
